@@ -11,9 +11,9 @@ describe('generator-bitrix:app', function () {
       .on('end', done);
   });
 
-  it('creates files', function () {
+  it('exists files', function () {
     assert.file([
-      'dummyfile.txt'
+      'index.php'
     ]);
   });
 });
