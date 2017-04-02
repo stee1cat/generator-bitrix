@@ -23,12 +23,10 @@
   ],
   "dependencies": {
     "chalk": "^1.0.0",
-    "lcov-parse": "0.0.6",
-    "mkdirp": "^0.3.5",
-    "rmdir": "~1.1.0",
+    "lcov-parse": "0.0.10",
     "tarball-extract": "0.0.3",
     "yeoman-generator": "^1.1.1",
-    "yosay": "^1.0.2"
+    "yosay": "^2.0.0"
   },
   "devDependencies": {
     "coveralls": "*",
