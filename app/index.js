@@ -1,3 +1,7 @@
+/**
+ * Copyright (c) 2017 Gennadiy Khatuntsev <e.steelcat@gmail.com>
+ */
+
 'use strict';
 
 var Generator = require('yeoman-generator');

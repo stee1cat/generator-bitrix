@@ -9,7 +9,8 @@
     "url": "fuget.ru"
   },
   "files": [
-    "app"
+    "app",
+    "component"
   ],
   "main": "app\\index.js",
   "keywords": [
