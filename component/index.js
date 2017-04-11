@@ -5,13 +5,17 @@
 'use strict';
 
 var Generator = require('yeoman-generator');
+var chalk = require('chalk');
 var yosay = require('yosay');
-var fs = require('fs');
 
 module.exports = Generator.extend({
   prompting: function () {
     var done = this.async();
     var self = this;
+
+    this.log(yosay(
+      'Welcome to the Yeoman ' + chalk.blue('Bitrix') + ' generator!'
+    ));
 
     var prompts = [{
       name: 'componentName',

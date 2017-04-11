@@ -8,7 +8,7 @@ var bitrixVersion = 'start';
 
 describe('generator-bitrix:app', function () {
   before(function () {
-    this.timeout(180000);
+    this.timeout(600000);
 
     return new Promise(function (resolve) {
       helpers.run(path.join(__dirname, '../app'))
