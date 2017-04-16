@@ -7,6 +7,7 @@
 var Generator = require('yeoman-generator');
 var chalk = require('chalk');
 var yosay = require('yosay');
+var util = require('../lib/util');
 
 module.exports = Generator.extend({
   prompting: function () {
@@ -31,10 +32,11 @@ module.exports = Generator.extend({
       });
   },
   writing: function () {
-    var destinationPath = 'local/components/' + this.props.componentName.toLowerCase() + '/class.php';
+    var classPrefix = util.componentNameToClassPrefix(this.props.componentName);
+    var destinationPath = 'local/components/' + util.componentNameToPath(this.props.componentName) + '/class.php';
 
     this.fs.copyTpl(this.templatePath('class.php'), this.destinationPath(destinationPath), {
-      componentName: this.props.componentName
+      classPrefix: classPrefix
     });
   }
 });

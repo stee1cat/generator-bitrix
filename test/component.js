@@ -12,7 +12,7 @@ describe('generator-bitrix:component', function () {
   before(function () {
     return new Promise(function (resolve) {
       helpers.run(path.join(__dirname, '../component'))
-        .withPrompts({componentName: 'test'})
+        .withPrompts({componentName: 'Vendor.Name'})
         .on('end', function () {
           resolve();
         });
@@ -21,7 +21,7 @@ describe('generator-bitrix:component', function () {
 
   it('exists files', function () {
     assert.file([
-      'local/components/test/class.php'
+      'local/components/vendor.name/class.php'
     ]);
   });
 });
