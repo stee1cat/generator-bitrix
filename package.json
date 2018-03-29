@@ -10,7 +10,8 @@
   },
   "files": [
     "app",
-    "component"
+    "component",
+    "lib"
   ],
   "main": "app\\index.js",
   "keywords": [
