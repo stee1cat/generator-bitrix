@@ -23,5 +23,17 @@ describe('generator-bitrix:component', function () {
     assert.file([
       'local/components/vendor.name/class.php'
     ]);
+
+    assert.file([
+      'local/components/vendor.name/.description.php'
+    ]);
+
+    assert.file([
+      'local/components/vendor.name/.parameters.php'
+    ]);
+
+    assert.file([
+      'local/components/vendor.name/templates/.default/template.php'
+    ]);
   });
 });

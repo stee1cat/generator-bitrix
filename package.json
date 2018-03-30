@@ -55,7 +55,7 @@
   },
   "repository": "stee1cat/generator-bitrix",
   "scripts": {
-    "prepublish": "gulp prepublish",
+    "prepare": "gulp prepublish",
     "test": "gulp"
   },
   "license": "Apache-2.0"

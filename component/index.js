@@ -32,11 +32,19 @@ module.exports = Generator.extend({
       });
   },
   writing: function () {
+    var componentName = util.componentNameToPath(this.props.componentName);
     var classPrefix = util.componentNameToClassPrefix(this.props.componentName);
-    var destinationPath = 'local/components/' + util.componentNameToPath(this.props.componentName) + '/class.php';
+    var destinationPath = 'local/components/' + componentName;
 
-    this.fs.copyTpl(this.templatePath('class.php'), this.destinationPath(destinationPath), {
+    this.fs.copyTpl(this.templatePath('class.php'), this.destinationPath(destinationPath + '/class.php'), {
       classPrefix: classPrefix
     });
+
+    this.fs.copyTpl(this.templatePath('.description.php'), this.destinationPath(destinationPath + '/.description.php'), {
+      componentName: componentName
+    });
+
+    this.fs.copy(this.templatePath('.parameters.php'), this.destinationPath(destinationPath + '/.parameters.php'));
+    this.fs.copy(this.templatePath('.default'), this.destinationPath(destinationPath + '/templates/.default'));
   }
 });
