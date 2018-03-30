@@ -10,7 +10,7 @@ var yosay = require('yosay');
 var tarball = require('tarball-extract');
 var fs = require('fs');
 
-var bitrixVersion = 'standart';
+var bitrixVersion = 'standard';
 var bitrixArchiveUrl = 'https://1c-bitrix.ru/download/files/';
 
 module.exports = Generator.extend({
@@ -31,8 +31,8 @@ module.exports = Generator.extend({
         value: 'start'
       },
       {
-        name: 'Standart',
-        value: 'standart'
+        name: 'Standard',
+        value: 'standard'
       },
       {
         name: 'Small Business',
